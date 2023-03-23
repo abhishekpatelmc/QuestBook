@@ -1,10 +1,24 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from home.models import Country, Adventure
 
 # Create your views here.
 def index(request):
-    return render(request, 'home/index.html')
+    countries = Country.objects.all()
+    return render(request, 'home/index.html', {'countries': countries})
+
+def CountryDetail(request):
+    countries = Country.objects.all()
+    return render(request, 'home/countrydetail.html', {'countries': countries})
+
+def Adventure(request):
+    adventure = Adventure.objects.all()
+    return render(request, 'home/adventure.html', {'adventure': adventure})
+
+def AdventureDetail(request):
+    adventure = Adventure.objects.all()
+    return render(request, 'home/adventuredetail.html', {'adventure': adventure})
 
 def login(request):
     if request.method == 'POST':
@@ -25,4 +39,4 @@ def login(request):
             messages.info(request, 'Invalid credential')
             return redirect('login')
     else:
-        return render(request, 'login.html')
+        return render(request, 'home/login.html')
