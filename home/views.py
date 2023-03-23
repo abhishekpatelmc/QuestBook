@@ -1,10 +1,24 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from home.models import Country, Adeventure
 
 # Create your views here.
 def index(request):
-    return render(request, 'home/index.html')
+    countries = Country.objects.all()
+    return render(request, 'home/index.html', {'countries': countries})
+
+def CountryDetail(request):
+    countries = Country.objects.all()
+    return render(request, 'home/countrydetail.html', {'countries': countries})
+
+def Adeventure(request):
+    adventure = Adeventure.objects.all()
+    return render(request, 'home/adventure.html', {'adventure': adventure})
+
+def AdeventureDetail(request):
+    adventure = Adeventure.objects.all()
+    return render(request, 'home/adventuredetail.html', {'adventure': adventure})
 
 def login(request):
     if request.method == 'POST':
