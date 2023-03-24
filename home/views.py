@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from home.models import Country, Adeventure
+from home.models import Country, Adventure
 
 # Create your views here.
 def index(request):
@@ -12,12 +12,12 @@ def CountryDetail(request):
     countries = Country.objects.all()
     return render(request, 'home/countrydetail.html', {'countries': countries})
 
-def Adeventure(request):
-    adventure = Adeventure.objects.all()
+def Adventure(request):
+    adventure = Adventure.objects.all()
     return render(request, 'home/adventure.html', {'adventure': adventure})
 
-def AdeventureDetail(request):
-    adventure = Adeventure.objects.all()
+def AdventureDetail(request):
+    adventure = Adventure.objects.all()
     return render(request, 'home/adventuredetail.html', {'adventure': adventure})
 
 def login(request):
@@ -39,4 +39,4 @@ def login(request):
             messages.info(request, 'Invalid credential')
             return redirect('login')
     else:
-        return render(request, 'login.html')
+        return render(request, 'home/login.html')
