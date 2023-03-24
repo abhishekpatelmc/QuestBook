@@ -40,3 +40,32 @@ def login(request):
             return redirect('login')
     else:
         return render(request, 'home/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if password1 == password2:
+            if User.objects.filter(username=username).exists():
+                messages.info(request, 'Username Taken')
+                return redirect('register')
+            elif User.objects.filter(email=email).exists():
+                messages.info(request, 'Email already Taken')
+                return redirect('register')
+            else:
+                user = User.objects.create_user(username=username, password=password1, email=email, last_name=last_name,
+                                                first_name=first_name)
+                user.save()
+                print('user Created')
+                return redirect('login')
+        else:
+            messages.info(request, 'Password is not matching ')
+            return redirect('register')
+        return redirect('index')
+    else:
+        return render(request, 'home/register.html')
