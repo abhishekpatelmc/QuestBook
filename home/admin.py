@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Country, Adventure
+from home.models import Destination, Detailed_desc
 
 # Register your models here.
-admin.site.register(Country)
-admin.site.register(Adventure)
-
+admin.site.register(Destination)
+admin.site.register(Detailed_desc)
