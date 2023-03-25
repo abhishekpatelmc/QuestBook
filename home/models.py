@@ -5,7 +5,7 @@ class Destination(models.Model):
     id = models.AutoField(primary_key=True)
     country = models.CharField(max_length=20)
     description = models.TextField(max_length=250)
-    img1 = models.ImageField(upload_to='images',blank=True)
+    img1 = models.ImageField(upload_to='images')
     img2 = models.ImageField(upload_to='images',blank=True)    
     number = models.IntegerField(default=2)
 
