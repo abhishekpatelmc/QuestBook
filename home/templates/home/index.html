@@ -39,7 +39,7 @@
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid">
                     <div class="header_bottom_border">
-                        <div class="row align-items-center">
+                        <div class="row align-items-center ">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
@@ -47,7 +47,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
+                            <div class="col-xl-6 col-lg-6 ">
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
@@ -64,18 +64,16 @@
 {#                                            {%endif%}#}
                                             <li><a href="#">Countries <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="home/country_details.html">India</a></li>
-                                                    <li><a href="home/country_details.html">Australia</a></li>
+                                                    {% for dest in dests %}
+                                                    <li><a href="country_details/{{dest.country}}">{{dest.country}}</a></li>
+                                                    {% endfor %}
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html"></a></li>
-
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-
-
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>
                             </div>
@@ -188,7 +186,7 @@
                         <img src="{{dest.img1.url}}" alt="">
                     </div>
                     <div class="content">
-                        <p class="d-flex align-items-center">{{dest.country}}<a href='destination_list/{{dest.country}} '>{{dest.number}} Places </a> </p>
+                        <p class="d-flex align-items-center">{{dest.country}}<a href='country_details/{{dest.country}} '>{{dest.number}} Places </a> </p>
 
                     </div>
                 </div>
@@ -200,38 +198,7 @@
     <!-- popular_destination_area_end  -->
 
     <!-- newletter_area_start  -->
-{#    <div class="newletter_area overlay">#}
-{#        <div class="container">#}
-{#            <div class="row justify-content-center align-items-center">#}
-{#                <div class="col-lg-10">#}
-{#                    <div class="row align-items-center">#}
-{#                        <div class="col-lg-5">#}
-{#                            <div class="newsletter_text">#}
-{#                                <h4>Subscribe Our Newsletter</h4>#}
-{#                                <p>Subscribe newsletter to get offers and about new places to discover.</p>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="col-lg-7">#}
-{#                            <div class="mail_form">#}
-{#                                <div class="row no-gutters">#}
-{#                                    <div class="col-lg-9 col-md-8">#}
-{#                                        <div class="newsletter_field">#}
-{#                                            <input type="email" placeholder="Your mail">#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="col-lg-3 col-md-4">#}
-{#                                        <div class="newsletter_btn">#}
-{#                                            <button class="boxed-btn4 " type="submit">Subscribe</button>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+
     <!-- newletter_area_end  -->
 
     <div class="popular_places_area">
@@ -338,8 +305,6 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="testmonial_active owl-carousel">
-
-
                         <div class="single_carousel">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
@@ -392,35 +357,13 @@
     </div>
     <!-- /testimonial_area  -->
 
-
-
-
-
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-
                 </div>
             </div>
         </div>
-{#        <div class="copy-right_text">#}
-{#            <div class="container">#}
-{#                <div class="footer_border"></div>#}
-{#                <div class="row">#}
-{#                    <div class="col-xl-12">#}
-{#                        <p class="copy_right text-center">#}
-{#                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
-{#                            Copyright &copy;#}
-{#                            <script>#}
-{#                                document.write(new Date().getFullYear());#}
-{#                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>#}
-{#                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
-{#                        </p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
     </footer>
 
 

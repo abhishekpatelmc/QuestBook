@@ -65,8 +65,9 @@
                                             {%endif%}
                                             <li><a href="#">Countries<i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="home/country_details.html">India</a></li>
-                                                    <li><a href="home/country_detials.html">Dubai</a></li>
+                                                    {% for item in country %}
+                                                    <li><a href="/country_details/{{item.country}}">{{item.country}}</a></li>
+                                                    {% endfor %}
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -181,14 +182,8 @@
                                     <p>{{dest.country}}</p>
                                     <div class="rating_days d-flex justify-content-between">
                                         <span class="d-flex justify-content-center align-items-center">
-
                                             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-
                                         </span>
-                                        <div class="days">
-                                            <i class="fa fa-clock-o"></i>
-                                            <a href='destination_details/{{dest.dest_name}}'>{{dest.days}} Days</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
