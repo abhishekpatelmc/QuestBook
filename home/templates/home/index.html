@@ -54,19 +54,18 @@
                                             <li><a class="active" href="/">home</a></li>
                                             <li><a href="about.html">About</a></li>
                                              </li>
-{#                                             <li><a href="upcoming_trips">Upcoming Trips</a></li>#}
+                                             <li><a href="upcoming_trips">My Bookings</a></li>
                                              </li>
 {#                                            {% if user.is_authenticated %}#}
 {#                                            <li>Hello, {{user.first_name}}</li>#}
 {#                                            <li><a href="logout">logout</a></li>#}
 {#                                            {%else%}#}
                                             <li><a href="login">Login</a></li>
-{#                                            <li><a href="register">Register</a></li>#}
 {#                                            {%endif%}#}
                                             <li><a href="#">Countries <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="home/country_details.html">India</a></li>
-                                                    <li><a href="home/country_details.html">Dubai</a></li>
+                                                    <li><a href="home/country_details.html">Australia</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html"></a></li>
@@ -240,7 +239,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center mb_70">
-                        <h3>Popular Places</h3>
+                        <h3>Adventure Places</h3>
                         <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
                     </div>
                 </div>
@@ -401,118 +400,7 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-{#                    <div class="col-xl-4 col-md-6 col-lg-4 ">#}
-{#                        <div class="footer_widget">#}
-{#                            <div class="footer_logo">#}
-{#                                <a href="#">#}
-{#                                    <img src="{% static 'img/footer_logo.png' %}" alt="">#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p>Kishan samosa<br> lane New York-1782 <br>#}
-{#                                <a href="#">+91 99999 88888</a> <br>#}
-{#                                <a href="#">dharmilvaghasia3675@gmail.com</a>#}
-{#                            </p>#}
-{#                            <div class="socail_links">#}
-{#                                <ul>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <i class="ti-facebook"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <i class="ti-twitter-alt"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <i class="fa fa-instagram"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <i class="fa fa-pinterest"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="https://www.youtube.com/user/javaboynavin">#}
-{#                                            <i class="fa fa-youtube-play"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-xl-2 col-md-6 col-lg-2">#}
-{#                        <div class="footer_widget">#}
-{#                            <h3 class="footer_title">#}
-{#                                Company#}
-{#                            </h3>#}
-{#                            <ul class="links">#}
-{#                                <li><a href="#">Pricing</a></li>#}
-{#                                <li><a href="#">About</a></li>#}
-{#                                <li><a href="#"> Gallery</a></li>#}
-{#                                <li><a href="#"> Contact</a></li>#}
-{#                            </ul>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-xl-3 col-md-6 col-lg-3">#}
-{#                        <div class="footer_widget">#}
-{#                            <h3 class="footer_title">#}
-{#                                Popular destination#}
-{#                            </h3>#}
-{#                            <ul class="links double_links">#}
-{#                                <li><a href="#">Indonesia</a></li>#}
-{#                                <li><a href="#">America</a></li>#}
-{#                                <li><a href="#">India</a></li>#}
-{#                                <li><a href="#">Switzerland</a></li>#}
-{#                                <li><a href="#">Italy</a></li>#}
-{#                                <li><a href="#">Canada</a></li>#}
-{#                                <li><a href="#">Franch</a></li>#}
-{#                                <li><a href="#">England</a></li>#}
-{#                            </ul>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-xl-3 col-md-6 col-lg-3">#}
-{#                        <div class="footer_widget">#}
-{#                            <h3 class="footer_title">#}
-{#                                Instagram#}
-{#                            </h3>#}
-{#                            <div class="instagram_feed">#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/1.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/2.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/3.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/4.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/5.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                                <div class="single_insta">#}
-{#                                    <a href="#">#}
-{#                                        <img src="{% static 'img/instagram/6.png' %}" alt="">#}
-{#                                    </a>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
+
                 </div>
             </div>
         </div>

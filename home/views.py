@@ -14,4 +14,4 @@ def adventure_details(request,city_name):
     price = dest.price
     request.session['price'] = price
     request.session['city'] = city_name
-    return render(request,'home/adventure_details.html',{'dest':dest})
+    return render(request,'home/adventure_details.html',{'dest':dest}, {'price':price})
