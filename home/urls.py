@@ -6,5 +6,5 @@ app_name = 'home'
 urlpatterns = [
     path('', views.index, name='index'),
     path('country_details/<str:city_name>/', views.country_details, name='country_details'),
-    # path(country_details/adventure_details/<str:city_name>', views.destination_details, name='adventure_details'),
+    path('adventure_details/<str:city_name>/', views.adventure_details, name='adventure_details'),
 ]
