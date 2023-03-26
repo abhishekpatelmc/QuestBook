@@ -12,7 +12,7 @@ urlpatterns = [
     path('country_details/<str:country_name>/adventure_details/<str:dest_name>/', views.adventure_details, name='adventure_details'),
     path('adventure_details/<str:dest_name>/', views.adventure_details, name='adventure_details'),
     path('booking', views.booking, name='booking'),
-    path('country_details/<str:country_name>/adventure_details/pessanger_detail_def/<str:city_name>',views.pessanger_detail_def,name='pessanger_detail_def'),
+    path('country_details/<str:country_name>/adventure_details/<str:dest_name>/pessanger_detail_def/<str:city_name>',views.pessanger_detail_def,name='pessanger_detail_def'),
     path('adventure_details/<str:dest_name>/pessanger_detail_def/<str:city_name>',views.pessanger_detail_def,name='pessanger_detail_def'),
 
 ]
