@@ -32,4 +32,22 @@ class Detailed_desc(models.Model):
 
     def __str__(self):
         return self.dest_name
-    
+
+class pessanger_detail(models.Model):
+    dest_id = models.ForeignKey(Detailed_desc, on_delete=models.CASCADE)
+    Trip_id = models.AutoField(primary_key=True)
+    Trip_same_id = models.IntegerField(default=1)
+    first_name = models.CharField(max_length=15)
+    last_name = models.CharField(max_length=15)
+    username = models.CharField(max_length=10)
+    Trip_date = models.DateField()
+    payment = models.IntegerField(default=50)
+    payment_currency = models.CharField(max_length=3)
+    city = models.CharField(max_length=20)
+    pay_done = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Trip Details'
+
+    def __str__(self):
+        return self.first_name
