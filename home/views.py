@@ -8,13 +8,13 @@ def index(request):
 def about(request):
     return render(request, 'home/about.html')
 
-def country_details(request,city_name):
+def country_details(request,country_name):
     country = Destination.objects.all()
-    dests = Detailed_desc.objects.all().filter(country=city_name)
+    dests = Detailed_desc.objects.all().filter(country=country_name)
     return render(request,'home/country_details.html',{'dests': dests, 'country':country})
 
-def adventure_details(request,dest_name):
+def adventure_details(request,dest_name,country_name):
     country = Destination.objects.all()
+    country_name = Destination.objects.get(country=country_name)
     dest = Detailed_desc.objects.get(dest_name=dest_name)
-    price = dest.price
-    return render(request,'home/adventure_details.html',{'dest': dest, 'country':country, 'price':price})
+    return render(request,'home/adventure_details.html',{'dest': dest, 'country_name': country_name ,'country':country})
