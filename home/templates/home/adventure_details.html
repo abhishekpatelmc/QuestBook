@@ -45,7 +45,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="{% static 'img/logo.png' %}" alt="">
                                     </a>
                                 </div>
@@ -55,12 +55,13 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="/">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="about">About</a></li>
                                             <li><a href="login">Login</a></li>
                                             <li><a href="#">Countries<i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="home/country_details">India</a></li>
-                                                    <li><a href="home/country_details">Australia</a></li>
+                                                    {% for item in country %}
+                                                    <li><a href="/country_details/{{item.country}}">{{item.country}}</a></li>
+                                                    {% endfor %}
                                                 </ul>
                                             </li>
                                         </ul>

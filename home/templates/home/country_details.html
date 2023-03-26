@@ -45,7 +45,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="{% static 'img/logo.png' %}" alt="">
                                     </a>
                                 </div>
@@ -55,7 +55,7 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="/">home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="about">About</a></li>
                                             {% if user.is_authenticated %}
                                             <li>Hello, {{user.first_name}}</li>
                                             <li><a href="logout">logout</a></li>
@@ -175,10 +175,10 @@
                             <div class="single_place">
                                 <div class="thumb">
                                     <img src="{{dest.img1.url}}" alt="">
-                                    <a href='destination_details/{{dest.dest_name}}' methods="GET" class="prise">₹{{dest.price}}</a>
+                                    <a href='adventure_details/{{dest.dest_name}}' methods="GET" class="prise">₹{{dest.price}}</a>
                                 </div>
                                 <div class="place_info">
-                                    <a href='destination_details/{{dest.dest_name}}' ><h3>{{dest.dest_name}}</h3></a>
+                                    <a href='adventure_details/{{dest.dest_name}}' ><h3>{{dest.dest_name}}</h3></a>
                                     <p>{{dest.country}}</p>
                                     <div class="rating_days d-flex justify-content-between">
                                         <span class="d-flex justify-content-center align-items-center">

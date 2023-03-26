@@ -42,7 +42,7 @@
                         <div class="row align-items-center ">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="{% static 'img/logo.png' %}" alt="">
                                     </a>
                                 </div>
@@ -52,9 +52,9 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="/">home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="about">About</a></li>
                                              </li>
-                                             <li><a href="upcoming_trips">My Bookings</a></li>
+                                             {% comment %} <li><a href="upcoming_trips">My Bookings</a></li> {% endcomment %}
                                              </li>
 {#                                            {% if user.is_authenticated %}#}
 {#                                            <li>Hello, {{user.first_name}}</li>#}
