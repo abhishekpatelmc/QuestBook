@@ -84,6 +84,7 @@ class KeyValueForm(forms.Form):
     last_name = forms.CharField()
     age = forms.IntegerField()
 def pessanger_detail_def(request, city_name, country_name=None, dest_name=None):
+    country = Destination.objects.all()
     KeyValueFormSet = formset_factory(KeyValueForm, extra=1)
     if request.method == 'POST':
         formset = KeyValueFormSet(request.POST)
@@ -124,4 +125,4 @@ def pessanger_detail_def(request, city_name, country_name=None, dest_name=None):
             return render(request,'home/payment.html', {'no_of_person': no_of_person,'price1': price1, 'GST': GST, 'final_total': final_total,'city': city })
     else:
         formset = KeyValueFormSet()
-        return render(request, 'home/booking.html', {'formset': formset, 'city_name': city_name, })
+        return render(request, 'home/booking.html', {'formset': formset, 'city_name': city_name, 'country': country})
