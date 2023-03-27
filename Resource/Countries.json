@@ -1,0 +1,39 @@
+{
+  "Destinations": [
+    {
+      "Country": "India",
+      "Description": "India is a vast and diverse country, offering a wide range of adventure activities for travellers. No matter what your interests, there is sure to be something to suit your taste.",
+      "image1": "",
+      "image2": "",
+      "Number": 3
+    },
+    {
+      "Country": "New Zealand",
+      "Description": "Known as the \"Adventure Capital of the World,\" New Zealand offers a wide range of adventure sports, including bungee jumping, skydiving, whitewater rafting, skiing, snowboarding, and hiking.",
+      "image1": "",
+      "image2": "",
+      "Number": 2
+    },
+    {
+      "Country": "Australia",
+      "Description": "With its diverse landscapes and vast coastlines, Australia is a haven for adventure sports enthusiasts. Popular activities include surfing, diving, kayaking, rock climbing, and caving.",
+      "image1": "",
+      "image2": "",
+      "Number": 3
+    },
+    {
+      "Country": "Canada",
+      "Description": "Canada's rugged terrain and abundant natural resources make it an ideal destination for adventure sports. Popular activities include skiing, snowboarding, ice climbing, kayaking, and mountain biking.",
+      "image1": "",
+      "image2": "",
+      "Number": 2
+    },
+    {
+      "Country": "United States of America",
+      "Description": "The United States offers a wide range of adventure sports, from skiing and snowboarding in the Rocky Mountains to surfing in Hawaii. Other popular activities include rock climbing, skydiving, and whitewater rafting.",
+      "image1": "",
+      "image2": "",
+      "Number": 3
+    }
+  ]
+}
