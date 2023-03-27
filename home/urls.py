@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path, re_path
+from django.views.generic import RedirectView
 from . import views
 
 app_name = 'home'
@@ -14,5 +15,6 @@ urlpatterns = [
     path('booking', views.booking, name='booking'),
     path('country_details/<str:country_name>/adventure_details/<str:dest_name>/pessanger_detail_def/<str:city_name>',views.pessanger_detail_def,name='pessanger_detail_def'),
     path('adventure_details/<str:dest_name>/pessanger_detail_def/<str:city_name>',views.pessanger_detail_def,name='pessanger_detail_def'),
+    re_path(r'^.*/$', RedirectView.as_view(url='/about', permanent=False), name='about_any'),
 
 ]

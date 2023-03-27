@@ -108,21 +108,20 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="/">home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="about">About</a></li>
                                             {% if user.is_authenticated %}
                                             <li>Hello, {{user.first_name}}</li>
                                             <li><a href="logout">logout</a></li>
                                             {%else%}
                                             <li><a href="login">Login</a></li>
-                                            <li><a href="register">Register</a></li>
                                             {%endif%}
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <li><a href="#">Countries <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                    {% for item in country %}
+                                                    <li><a href="/country_details/{{item.country}}">{{item.country}}</a></li>
+                                                    {% endfor %}
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
                                              </li>
 
                                         </ul>
