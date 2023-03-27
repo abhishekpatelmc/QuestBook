@@ -57,7 +57,7 @@
                                             <li><a href="#">Countries <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     {% for dest in dests %}
-                                                    <li><a href="country_details/{{dest.country}}">{{dest.country}}</a></li>
+                                                    <li><a href="country_details/{{dest.country}}/">{{dest.country}}</a></li>
                                                     {% endfor %}
                                                 </ul>
                                             </li>
@@ -174,10 +174,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_destination">
                     <div class="thumb">
-                        <img src="{{dest.img2.url}}" alt="" style={height: 3000px;}>
+                        <img src="{{dest.img2.url}}" alt="">
                     </div>
                     <div class="content">
-                        <p class="d-flex align-items-center">{{dest.country}}<a href='country_details/{{dest.country}}'>{{dest.number}} Places </a> </p>
+                        <p class="d-flex align-items-center">{{dest.country}}<a href='country_details/{{dest.country}}/'>{{dest.number}} Places </a> </p>
 
                     </div>
                 </div>
