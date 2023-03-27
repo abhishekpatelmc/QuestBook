@@ -58,7 +58,6 @@
                       <ul id="navigation" style="float: right">
                         <li><a class="active" href="/">Home</a></li>
                         <li><a href="about/">About</a></li>
-                        <li><a href="login">Login</a></li>
                         <li>
                           <a href="#">Countries<i class="ti-angle-down"></i></a>
                           <ul class="submenu">
@@ -71,6 +70,7 @@
                             {% endfor %}
                           </ul>
                         </li>
+                        <li><a href="login">Login</a></li>
                       </ul>
                     </nav>
                   </div>
@@ -93,13 +93,13 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-9">
             <div class="destination_info">
-              <h2>{{dest.country}}</h2>
-              <p>{{dest.dest_name}}</p>
+              <h3>{{dest.country}}</h3>
+              <p class="lead">{{dest.dest_name}}</p>
               <h3>Description</h3>
-              <p>{{dest.desc}}</p>
+              <p class="lead">{{dest.desc}}</p>
               <div class="single_destination">
                 <h4>Price</h4>
-                <p>{{dest.price}}</p>
+                <p class="lead">$ {{dest.price}}</p>
               </div>
             </div>
             <div class="bordered_1px"></div>
@@ -111,7 +111,7 @@
                     <button
                       class="boxed-btn4"
                       type="button"
-                      onclick="window.location.href='pessanger_detail_def/{{dest.dest_name}}'"
+                      onclick="window.location.href='passenger_detail/{{dest.dest_name}}'"
                     >
                       Book Here
                     </button>
