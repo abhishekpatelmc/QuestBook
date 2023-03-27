@@ -82,29 +82,36 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <h2 class="text-center mb-4">Start Your Booking Here</h2>
-            <form method="POST" action="passenger_detail">
+            <form method="POST"  class="row row-cols-lg-auto g-3 align-items-center" action="passenger_detail">
               {% csrf_token %}
-              <div class="form-group">
+              <div class="form-group col-12">
                 <label for="first_name" class="lead">First Name:</label>
                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" required>
               </div>
-              <div class="form-group">
+              <div class="form-group col-12">
                 <label for="last_name" class="lead">Last Name:</label>
                 <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Enter Last Name" required>
               </div>
-              <div class="form-group">
+              <div class="form-group col-12">
                 <label for="trip_date" class="lead">Trip Date:</label>
                 <input type="date" id="trip_date" name="trip_date" class="form-control date" required>
               </div>
-              <div class="form-group">
+              <div class="form-group col-12" >
+                <label for="payment_currency" class="lead">Payment Currency:</label>
+                  <select id="payment_currency" name="payment_currency"  class="form-select" placeholder="select Payment Currency" required>
+                  <option selected>Open this select menu</option>
+                  <option value="CAD">$CAD</option>
+                  <option value="USD">$USD</option>
+                  <option value="RUPEE">Rupee</option>
+                </select>
+              </div>
+              <div class="form-group col-12">
                 <label for="city" class="lead">City:</label>
                 <input type="text" id="city" name="city" class="form-control" placeholder="Enter City" required>
               </div>
-              <div class="form-group">
-                <label for="payment_currency" class="lead">Payment Currency:</label>
-                <input type="text" id="payment_currency" name="payment_currency" class="form-control" placeholder="Enter Payment Currency" required>
-              </div>
-              <div class="text-center">
+             
+              
+              <div class="text-center col-12" style="margin-top: 20px">
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
               </div>
             </form>
@@ -159,7 +166,6 @@
 </body>
 
 </html>
-
 
 
 
