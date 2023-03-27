@@ -17,7 +17,3 @@ urlpatterns = [
     path('adventure_details/<str:dest_name>/passenger_detail/<str:city_name>', views.passenger_detail,name='passenger_detail'),
     re_path(r'^.*/$', RedirectView.as_view(url='/about', permanent=False), name='about_any'),
 ]
-
-urlpatterns += [
-    re_path(r'^.*$', views.custom_404_page, name='custom_404'),
-]
