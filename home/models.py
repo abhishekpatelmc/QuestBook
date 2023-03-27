@@ -35,7 +35,6 @@ class Detailed_desc(models.Model):
 
 
 class PassengerDetail(models.Model):
-    dest_id = models.ForeignKey(Detailed_desc, on_delete=models.CASCADE)
     Trip_id = models.AutoField(primary_key=True)
     Trip_same_id = models.IntegerField(default=1)
     first_name = models.CharField(max_length=15)

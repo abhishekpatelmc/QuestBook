@@ -41,14 +41,14 @@
                     <div class="header_bottom_border">
                         <div class="row align-items-center ">
                             <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
+                                <div style="margin-top: 10px">
                                     <a href="/">
-                                        <img src="{% static 'img/logo3.jpg' %}" alt="">
+                                        <h2 >QuestBook</h2>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-xl-6 offset-lg-4 col-lg-6 ">
-                                <div class="main-menu  d-none d-lg-block">
+                                <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation" style="float: right">
                                             <li><a class="active" href="/">home</a></li>
@@ -208,10 +208,10 @@
                     <div class="single_place">
                         <div class="thumb">
                             <img src="{{adventure.img1.url}}" alt="">
-                            <a href='adventure_details/{{adventure.dest_name}}' class="prise">₹{{adventure.price}}</a>
+                            <a href='adventure_details/{{adventure.dest_name}}/' class="prise">₹{{adventure.price}}</a>
                         </div>
                         <div class="place_info">
-                            <a href='adventure_details/{{adventure.dest_name}}'>
+                            <a href='adventure_details/{{adventure.dest_name}}/'>
                                 <h3>{{adventure.dest_name}}</h3>
                             </a>
                             <p>{{adventure.country}}</p>
@@ -345,26 +345,10 @@
     <!-- /testimonial_area  -->
 
     <footer class="footer">
-{#        <div class="footer_top">#}
-{#            <div class="container">#}
-                <div class="row">
-        <div class="col-1-of-2">
-            <div class="footer__navigation">
-                <ul class="footer__list">
-            <li class="footer__item"><a href="{% url 'index' %}" class="footer__link">Home Page</a></li>
-            <li class="footer__item"><a href="{% url 'home:about' %}" class="footer__link">About</a></li>
-            <li class="footer__item"><a href="{% url 'home:login' %}" class="footer__link">Login</a></li>
-{#                    <li class="footer__item"><a href="{% url 'home:adventure_details' %}" class="footer__link">Adventure Details</a></li>#}
-{#                    <li class="footer__item"><a href="{% url 'home:country_details' %}" class="footer__link">Country Details</a></li>#}
-
-
-</ul>
-            </div>
+        <div class="copy-right_text">
+          <div class="footer_border"></div>
         </div>
-        </div>
-{#            </div>#}
-{#        </div>#}
-    </footer>
+      </footer>
 
 
     <!-- Modal -->

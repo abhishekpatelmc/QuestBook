@@ -83,62 +83,7 @@ def register(request):
         return render(request, 'home/register.html')
 
 
-# def booking(request):
-#     return render(request, 'home/booking.html')
-
-
-# class KeyValueForm(forms.Form):
-#     first_name = forms.CharField()
-#     last_name = forms.CharField()
-#     age = forms.IntegerField()
-# def pessanger_detail_def(request, city_name):
-#     PassengerDetailsForm = formset_factory(pessanger_detail, extra=1)
-#     if request.method == 'POST':
-#         formset = PassengerDetailsForm(request.POST)
-#         if formset.is_valid():
-#             if 'trip_date' in request.POST:
-#                 temp_date = datetime.strptime(request.POST['trip_date'], "%Y-%m-%d").date()
-#             else:
-#                 # handle missing trip_date field
-#                 return redirect('index')
-#             date1 = datetime.now().date()
-#             if temp_date < date1:
-#                 return redirect('index')
-#             obj = pessanger_detail.objects.get(Trip_id=3)
-#             pipo_id = obj.Trip_same_id
-#             #pipo_id =4
-#             request.session['Trip_same_id'] = pipo_id
-#             price = request.session['price']
-#             city = request.session['city']
-#             print(request.POST['trip_date'])
-#             #temp_date = parse_date(request.POST['trip_date'])
-#             temp_date = datetime.strptime(request.POST['trip_date'], "%Y-%m-%d").date()
-#             usernameget = request.user.get_username()
-#             print(temp_date)
-#             request.session['n']=formset.total_form_count()
-#             for i in range(0, formset.total_form_count()):
-#                 form = formset.forms[i]
-#
-#                 t = pessanger_detail(Trip_same_id=pipo_id,first_name=form.cleaned_data['first_name'], last_name=form.cleaned_data['last_name'],
-#                                      age=form.cleaned_data['age'],
-#                                      Trip_date=temp_date,payment=price,username=usernameget,city=city)
-#                 t.save()
-#                 # print (formset.forms[i].form-[i]-value)
-#
-#             obj.Trip_same_id = (pipo_id + 1)
-#             obj.save()
-#             no_of_person = formset.total_form_count()
-#             price1 = no_of_person * price
-#             GST = price1 * 0.13
-#             GST = float("{:.2f}".format(GST))
-#             final_total = GST + price1
-#             request.session['pay_amount'] = final_total
-#             return render(request,'home/payment.html', {'no_of_person': no_of_person,'price1': price1, 'GST': GST, 'final_total': final_total,'city': city })
-#     else:
-#         formset = PassengerDetailsForm()
-#         return render(request, 'home/booking.html', {'formset': formset, 'city_name': city_name, })
-
-def passenger_detail(request, city_name,country_name,dest_name):
+def passenger_detail(request,city_name,country_name=None,dest_name=None):
     msg = ""
     if request.method == "POST":
         form = PassengerDetailsForm(request.POST)
