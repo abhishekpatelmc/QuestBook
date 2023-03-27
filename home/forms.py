@@ -1,9 +1,10 @@
 from django import forms
-from .models import Destination, Detailed_desc, pessanger_detail
+from .models import Destination, Detailed_desc, PassengerDetail
+
 
 class PassengerDetailsForm(forms.ModelForm):
     class Meta:
-        model = pessanger_detail
+        model = PassengerDetail
         fields = [
             'first_name',
             'last_name',
