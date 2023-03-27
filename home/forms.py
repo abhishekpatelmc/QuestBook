@@ -20,3 +20,22 @@ class PassengerDetailsForm(forms.ModelForm):
             'city': 'City',
             'payment_currency': 'Payment Currency',
         }
+
+class RegisterForm(forms.Form):
+    class Meta:
+        Model = PassengerDetail
+        Fields = [
+            'first_name',
+            'last_name',
+            'password',
+            'email',
+            'phone',
+            
+        ]
+        labels = {
+            'first_name': 'First Name',
+            'last_name': 'Last Name',
+            'password': 'Password',
+            'email': 'Email',
+            'phone': 'Phone Number',
+        }

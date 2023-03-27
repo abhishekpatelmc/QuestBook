@@ -17,7 +17,8 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    country = Destination.objects.all()
+    return render(request, 'home/about.html',{'country': country})
 
 
 def country_details(request, country_name):

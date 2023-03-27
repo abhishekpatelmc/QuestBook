@@ -38,28 +38,28 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required">First Name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <label for="first_name">First Name</label>
+                                    <input class="input--style-4" type="text" name="first_name" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required">Last Name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <label class="label">Last Name</label>
+                                    <input class="input--style-4" type="text" name="last_name" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required">Password</label>
-                                    <input class="input--style-4 " type="password" name="password1" />
+                                    <label class="label">Password</label>
+                                    <input class="input--style-4 " type="password" name="password1" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required"> Confirm Password </label>
-                                    <input class="input--style-4" type="password" name="password2" />
+                                    <label class="label">Confirm Password </label>
+                                    <input class="input--style-4" type="password" name="password2" required>
                                 </div>
                             </div>
 
@@ -67,23 +67,23 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label required">Mobile Number</label>
-                                    <input class="input--style-4" type="text" name="username" maxlength="10">
+                                    <label class="label">Mobile Number</label>
+                                    <input class="input--style-4" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" name="username" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="p-t-15">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button><br><br><br>
-                            <button class="btn btn--radius-2 btn--green" type="button" onclick="window.location.href='/login'">Signin</button>
+                            <button class="btn btn--radius-2 btn--green" type="button" onclick="window.location.href='login'">Signin</button>
 
                         </div>
                         <div>

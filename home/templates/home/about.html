@@ -55,13 +55,12 @@
                                     <ul id="navigation" style="float: right">
                                         <li><a class="active" href="/">home</a></li>
                                         <li><a href="about">About</a></li>
-{#                                            {%endif%}#}
                                         <li><a href="#">Countries <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                {% for dest in dests %}
-                                                <li><a href="country_details/{{dest.country}}">{{dest.country}}</a></li>
-                                                {% endfor %}
-                                            </ul>
+                                          <ul class="submenu">
+                                              {% for dest in country %}
+                                              <li><a href="country_details/{{dest.country}}/">{{dest.country}}</a></li>
+                                              {% endfor %}
+                                          </ul>
                                         </li>
                                         <li><a href="login">Login</a></li>
 
