@@ -29,11 +29,25 @@
       "Number": 2
     },
     {
-      "Country": "United States of America",
+      "Country": "USA",
       "Description": "The United States offers a wide range of adventure sports, from skiing and snowboarding in the Rocky Mountains to surfing in Hawaii. Other popular activities include rock climbing, skydiving, and whitewater rafting.",
       "image1": "",
       "image2": "",
       "Number": 3
+    },
+    {
+      "Country": "Chile",
+      "Description": "Chile's diverse landscape and favourable climate make it a popular destination for adventure sports. Activities include skiing, snowboarding, surfing, kayaking, and hiking.",
+      "image1": "",
+      "image2": "",
+      "Number": 2
+    },
+    {
+      "Country": "Norway",
+      "Description": "Norway's stunning scenery and rugged coastline make it a prime location for adventure sports. Activities include hiking, skiing, snowboarding, kayaking, and surfing.",
+      "image1": "",
+      "image2": "",
+      "Number": 2
     }
   ]
 }

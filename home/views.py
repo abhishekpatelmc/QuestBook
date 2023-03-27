@@ -22,9 +22,9 @@ def about(request):
 
 def country_details(request, country_name):
     country = Destination.objects.all()
+    country_details = Destination.objects.get(country=country_name)
     dests = Detailed_desc.objects.all().filter(country=country_name)
-    return render(request, 'home/country_details.html',
-                  {'dests': dests, 'country': country, 'country_name': country_name})
+    return render(request, 'home/country_details.html', {'dests': dests, 'country': country, 'country_name': country_name, 'country_details': country_details})
 
 
 def adventure_details(request, dest_name, country_name=None):
