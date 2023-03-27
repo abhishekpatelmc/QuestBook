@@ -98,3 +98,9 @@ def passenger_detail(request,city_name,country_name=None,dest_name=None):
     else:
         form = PassengerDetailsForm()
     return render(request, 'home/booking.html', {'form': form, 'msg': msg})
+
+def custom_404_page(request, exception=None):
+    """
+    404 page error.
+    """
+    return render(request, 'home/404.html', status=404)
