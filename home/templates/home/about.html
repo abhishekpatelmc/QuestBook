@@ -1,18 +1,133 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Quest Book</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/parachuting.png' %} ">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
 <!DOCTYPE html>
-<html>
-  <title>QuestBook</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway"
-  />
-  <body>
-    <div class="text-center mt-20">
-      <h1 class="text-4xl font-semibold">About</h1>
-      <p class="text-lg mt-20">Must do list adventures a country</p>
+<html lang="en">
+
+<body>
+  <header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center ">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="{% static 'img/logo3.jpg' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 offset-lg-4 col-lg-6 ">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation" style="float: right">
+                                        <li><a class="active" href="/">home</a></li>
+                                        <li><a href="about">About</a></li>
+{#                                            {%endif%}#}
+                                        <li><a href="#">Countries <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                {% for dest in dests %}
+                                                <li><a href="country_details/{{dest.country}}">{{dest.country}}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        <li><a href="login">Login</a></li>
+
+                                        <li><a href="contact.html"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </body>
-</html>
+</header>
+
+  <main>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="text-center mb-4">About Quest Book</h1>
+          <p class="lead">Quest Book is the ultimate guide for adventure seekers looking to explore the best experiences a
+            country has to offer. Our team of passionate travelers scours each destination to find the most thrilling
+            activities and hidden gems that are sure to make your trip unforgettable.</p>
+          <br>
+          <p class="lead">From white water rafting to skydiving, we've got you covered. We're constantly updating our
+            database with new and exciting adventures so you can keep coming back for more.</p>
+          <br>
+          <p class="lead">Thanks for choosing Quest Book for your next adventure!</p>
+          
+          <div class="container mt-5">
+            <h2 class="text-center mb-4">Our Mission</h2>
+            <p class="lead">At Quest Book, our mission is to inspire and empower people to explore the world and embrace adventure. We believe that life is all about experiences and that the best way to create memories is to push ourselves out of our comfort zones and try new things.</p>
+            <br>
+            <p class="lead">That's why we're dedicated to curating the most exciting and unique experiences in each destination we feature. Whether you're a seasoned traveler or a first-time adventurer, we've got something for everyone.</p>
+          </div>
+    
+          <div class="container mt-5">
+            <h2 class="text-center mb-4">Our Team</h2>
+            <p class="lead">Our team is made up of passionate travelers who have a deep love for adventure and exploration. We've all had our fair share of thrilling experiences, from bungee jumping in New Zealand to surfing in Bali.</p>
+            <br>
+            <p class="lead">We're dedicated to sharing our knowledge and expertise with our readers to help them have the most unforgettable adventures possible. From researching the best activities to writing detailed guides, we put our heart and soul into everything we do.</p>
+          </div>
+    
+          <div class="container mt-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="lead">If you have any questions, comments, or feedback, we'd love to hear from you! You can reach out to us through our <a href="contact.html">contact page</a> and we'll get back to you as soon as possible.</p>
+            <br>
+            <p class="lead">Follow us on social media to stay up-to-date on the latest adventures and travel tips:</p>
+            <ul class="list-inline">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- <footer class="footer">
+                    <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+
+                </div>
+            </div>
+          </div>
+        </footer> -->
+
+  <!-- Bootstrap Bundle with
