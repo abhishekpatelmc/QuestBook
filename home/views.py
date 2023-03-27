@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 
 def index(request):
     dests = Destination.objects.all()
-    adventures = Detailed_desc.objects.all()
+    adventures = Detailed_desc.objects.all()[:6]
     return render(request, 'home/index.html', {'dests': dests, 'adventures': adventures})
 
 
