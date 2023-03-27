@@ -172,7 +172,7 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   padding: 15px;
   background-repeat: no-repeat;
