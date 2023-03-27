@@ -53,14 +53,6 @@
                                         <ul id="navigation" style="float: right">
                                             <li><a class="active" href="/">home</a></li>
                                             <li><a href="about">About</a></li>
-                                             </li>
-                                             {% comment %} <li><a href="upcoming_trips">My Bookings</a></li> {% endcomment %}
-                                             </li>
-{#                                            {% if user.is_authenticated %}#}
-{#                                            <li>Hello, {{user.first_name}}</li>#}
-{#                                            <li><a href="logout">logout</a></li>#}
-{#                                            {%else%}#}
-                                            <li><a href="login">Login</a></li>
 {#                                            {%endif%}#}
                                             <li><a href="#">Countries <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
@@ -69,6 +61,8 @@
                                                     {% endfor %}
                                                 </ul>
                                             </li>
+                                            <li><a href="login">Login</a></li>
+
                                             <li><a href="contact.html"></a></li>
                                         </ul>
                                     </nav>
@@ -93,7 +87,7 @@
                             <div class="slider_text text-center">
                                 <h3>Switzerland</h3>
                                 <p></p>
-                                <a href="destination_details/Switzerland" class="boxed-btn3">Explore Now</a>
+{#                                <a href="destination_details/Switzerland" class="boxed-btn3">Explore Now</a>#}
                             </div>
                         </div>
                     </div>
@@ -107,7 +101,7 @@
                             <div class="slider_text text-center">
                                 <h3>Australia</h3>
                                 <p></p>
-                                <a href="destination_list/Australia" class="boxed-btn3">Explore Now</a>
+{#                                <a href="destination_list/Australia" class="boxed-btn3">Explore Now</a>#}
                             </div>
                         </div>
                     </div>
@@ -121,7 +115,7 @@
                             <div class="slider_text text-center">
                                 <h3>Italy</h3>
                                 <p></p>
-                                <a href="destination_list/Italy" class="boxed-btn3">Explore Now</a>
+{#                                <a href="destination_list/Italy" class="boxed-btn3">Explore Now</a>#}
                             </div>
                         </div>
                     </div>
@@ -351,12 +345,25 @@
     <!-- /testimonial_area  -->
 
     <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
+{#        <div class="footer_top">#}
+{#            <div class="container">#}
                 <div class="row">
-                </div>
+        <div class="col-1-of-2">
+            <div class="footer__navigation">
+                <ul class="footer__list">
+            <li class="footer__item"><a href="{% url 'index' %}" class="footer__link">Home Page</a></li>
+            <li class="footer__item"><a href="{% url 'home:about' %}" class="footer__link">About</a></li>
+            <li class="footer__item"><a href="{% url 'home:login' %}" class="footer__link">Login</a></li>
+{#                    <li class="footer__item"><a href="{% url 'home:adventure_details' %}" class="footer__link">Adventure Details</a></li>#}
+{#                    <li class="footer__item"><a href="{% url 'home:country_details' %}" class="footer__link">Country Details</a></li>#}
+
+
+</ul>
             </div>
         </div>
+        </div>
+{#            </div>#}
+{#        </div>#}
     </footer>
 
 
