@@ -32,9 +32,6 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
     <!-- header-start -->
     <header>
@@ -55,7 +52,7 @@
                                     <nav>
                                         <ul id="navigation" style="float: right">
                                             <li><a class="active" href="/">home</a></li>
-                                            <li><a href="about">About</a></li>
+                                            <li><a href="about/">About</a></li>
                                             {% if user.is_authenticated %}
                                             <li>Hello, {{user.first_name}}</li>
                                             <li><a href="logout">logout</a></li>
@@ -74,40 +71,8 @@
                                     </nav>
                                 </div>
                             </div>
-
-
-{#                             <div class="col-xl-4 col-lg-4 d-none d-lg-block">#}
-{#                                <div class="social_wrap d-flex align-items-center justify-content-end">#}
-{#                                    <div class="number">#}
-{#                                        <p> <i class="fa fa-phone"></i> 0261-25569</p>#}
-{#                                    </div>#}
-{##}
-{#                                    <div class="social_links d-none d-xl-block">#}
-{#                                        <ul>#}
-{#                                            <li>#}
-{#                                                <a href="#"> <i class="fa fa-instagram"></i> </a>#}
-{#                                            </li>#}
-{#                                            <li>#}
-{#                                                <a href="#"> <i class="fa fa-linkedin"></i> </a>#}
-{#                                            </li>#}
-{#                                            <li>#}
-{#                                                <a href="#"> <i class="fa fa-facebook"></i> </a>#}
-{#                                            </li>#}
-{#                                            <li>#}
-{#                                                <a href="#"> <i class="fa fa-google-plus"></i> </a>#}
-{#                                            </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                            </div>#}
-
-
-{#                            <div class="col-12">#}
-{#                                <div class="mobile_menu d-block d-lg-none"></div>#}
-{#                            </div>#}
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -121,7 +86,7 @@
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
                         <h3>{{country_name}}</h3>
-                        <p></p>
+                        
                     </div>
                 </div>
             </div>
@@ -162,7 +127,25 @@
     </div>
     <!-- where_togo_area_end  -->
 
-    <p> {{ country_details.description }} </p>
+    <!-- COuntry Details start  -->
+
+    <div class="popular_destination_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center mb_40">
+                        <h3>{{country_name}}</h3>
+                        <h1 class="lead">{{ country_details.description }} </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- COuntry Details End  -->
+    
+    
 
 
     <!-- popular_places_area_start  -->
