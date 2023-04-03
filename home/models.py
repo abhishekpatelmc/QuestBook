@@ -45,3 +45,9 @@ class PassengerDetail(models.Model):
     payment_currency = models.CharField(max_length=3)
     city = models.CharField(max_length=20)
     pay_done = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Passenger Details'
+
+    def __str__(self):
+        return self.first_name
