@@ -4,8 +4,8 @@ Must do list adventures a country
 ## Installation
 
 - Clone the repository: git clone ``https://github.com/abhishekpatelmc/QuestBook.git``
-- Create a virtual environment: ``python3 -m venv env``
-- Activate the virtual environment: ``source env/Scripts/activate``
+- Create a virtual environment: ``python -m venv env``
+- Activate the virtual environment: ``. env/Scripts/activate``
 - Install the requirements: ``pip install -r requirements.txt``
 - Create the database tables: ``python manage.py migrate``
 
